@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="my logo.webp" type="image/x-icon">
+    <title>Smart Gatenga Garden</title>
+</head>
+<body>
+    <header class="heading">
+        <div class="logo">
+            <h3>Smart Gatenga Garden</h3>
+            <img src="my logo.webp" alt=""><h1>SGG</h1>
+        </div>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="over.html">Overview</a>
+            <a href="object.html">Key Objectives</a>
+            <a href="active.html">Share Idea</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+    </header>
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: url('suistainable.avif');">
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <h2>Empowering Community Farming</h2>
+            <p>Together we grow a greener, self-reliant Umudugudu.</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('youth22.webp');">
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <h2>Youth Empowerment</h2>
+            <p>Equipping youth with skills for a sustainable future.</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('innovation.jpg');">
+          <div class="overlay"></div>
+          <div class="slide-content">
+            <h2>Organic Food for All</h2>
+            <p>Safe, local, and healthy food straight from our soil.</p>
+          </div>
+        </div>
+      
+        
+        <button class="nav prev">&#10094;</button>
+        <button class="nav next">&#10095;</button>
+      </section>
+      <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+        let currentSlide = 0;
+      
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+          });
+          slides[index].classList.add('active');
+        }
+      
+        nextBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        });
+      
+        prevBtn.addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        });
+      
+        // Auto-scroll every 5 seconds
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }, 5000);
+      </script>
+      
+    <div class="smart">
+        <p>Smart Gatenga Garden</p>
+        <p id="scrollWord"></p>
+    </div>
+    
+      <script>
+        const words = [
+          "Community", "Organic", "Farming", "for", "Food", "Security", "and", "Youth", "Empowerment"
+        ];
+        const scrollEl = document.getElementById("scrollWord");
+        let index = 0;
+      
+        function rotateWords() {
+          scrollEl.textContent = words[index];
+          index = (index + 1) % words.length;
+          setTimeout(rotateWords, 1000); // Change word every 1 second
+        }
+      
+        rotateWords();
+      </script>
+      
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Smart Gatenga Garden</h3>
+            <p>Empowering Youth | Securing Food | Growing Together</p>
+          </div>
+          <div class="footer-right">
+            <p>📞 +250 789 444 935</p>
+            <p>📧 info@gatengagarden.org</p>
+            <p>© 2025 All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      
+      
+    
+</body>
+</html>

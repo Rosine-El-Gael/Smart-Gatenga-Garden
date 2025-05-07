@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="my logo.webp" type="image/x-icon">
+    <title>Smart Gatenga Garden</title>
+</head>
+<body>
+    <script>
+        const form = document.getElementById('thoughtForm');
+        const response = document.getElementById('response');
+      
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          response.textContent = "Thank you for your contribution! We have received your input.";
+          form.reset();
+        });
+      </script>
+     <section id="form" class="container my-5">
+        <!-- Top Back Button -->
+        <div class="mb-3">
+          <a href="index.html" class="btn btn-outline-success">
+            <i class="bi bi-arrow-left"></i> Back
+          </a>
+        </div>
+      
+        <h2 class="mb-4 text-center text-success">Share Your Ideas & Credentials</h2>
+        
+        <form id="thoughtForm" class="mx-auto p-4 rounded shadow-sm" style="background-color: #e9f5ea; max-width: 600px;">
+      
+          <div class="mb-3">
+            <label for="name" class="form-label text-success">Full Name</label>
+            <input type="text" class="form-control border-success" id="name" placeholder="Enter your full name" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="village" class="form-label text-success">Umudugudu (Village)</label>
+            <input type="text" class="form-control border-success" id="village" placeholder="Your village name" required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="email" class="form-label text-success">Email or Phone</label>
+            <input type="text" class="form-control border-success" id="email" placeholder="you@example.com or +250..." required>
+          </div>
+      
+          <div class="mb-3">
+            <label for="skills" class="form-label text-success">Your Skills/Experience</label>
+            <textarea class="form-control border-success" id="skills" rows="3" placeholder="Tell us about your background" required></textarea>
+          </div>
+      
+          <div class="mb-3">
+            <label for="ideas" class="form-label text-success">Your Ideas/Thoughts</label>
+            <textarea class="form-control border-success" id="ideas" rows="4" placeholder="Share your ideas for the project..." required></textarea>
+          </div>
+      
+          <div class="d-flex justify-content-between">
+            <a href="index.html" class="btn btn-outline-success">
+              <i class="bi bi-arrow-left"></i> Back
+            </a>
+            <button type="submit" class="btn btn-success">
+              <i class="bi bi-send-fill"></i> Submit
+            </button>
+          </div>
+      
+          <p id="response" class="mt-3 text-success fw-bold"></p>
+        </form>
+      </section>
+      
+      
+    
+    
+    <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Smart Gatenga Garden</h3>
+            <p>Empowering Youth | Securing Food | Growing Together</p>
+          </div>
+          <div class="footer-right">
+            <p>📞 +250 789 444 935</p>
+            <p>📧 info@gatengagarden.org</p>
+            <p>© 2025 All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
